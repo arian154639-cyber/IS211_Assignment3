@@ -39,7 +39,7 @@ def imageSearch(rows):
 
 def browserSearch(rows):
     browsers = ['Chrome', 'Firefox', 'Safari', 'MSIE']
-    browsers_regex = re.compile("|".join(browsers), re.IGNORECASE)    
+    browsers_regex = re.compile("|".join(browsers))    
     total_browsers = len(rows)
     matched_browsers = rows.copy()
     count_of_each_browser = {browser_name: 0 for browser_name in browsers}
