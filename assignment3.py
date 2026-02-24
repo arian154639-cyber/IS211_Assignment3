@@ -39,12 +39,12 @@ def imageSearch(rows):
 
 def browserSearch(rows):
     browsers = ['Chrome', 'Firefox', 'Safari', 'MSIE']
-    pattern = re.compile("|".join(browsers), re.IGNORECASE)    
+    browsers_regex = re.compile("|".join(browsers), re.IGNORECASE)    
     total_browsers = len(rows)
     matched_browsers = rows.copy()
     count_of_each_browser = {browser_name: 0 for browser_name in browsers}
     for row in rows:
-        browser = pattern.search(row[2]).group(0)
+        browser = browsers_regex.search(row[2]).group(0)
         count_of_each_browser[browser] += 1
     most_popular = max(count_of_each_browser, key=count_of_each_browser.get)
     percent = (count_of_each_browser[most_popular] / total_browsers) * 100
