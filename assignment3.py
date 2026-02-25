@@ -1,9 +1,9 @@
 """Note: The URL was not working so I had to test a local file version of the script. I chose to 
-break up the RegEx in imageSearch and browserSearch because I was having trouble comprehending 
-everything in one line, as the full regular expression was a bit overwhelming to do all at once.
-Since the instructions mentioned that we have freedom to choose how we want to do this, I chose not
-to use main() or if __name__ == "__main__" because during my research, I discovered that these are mainly
-used for lengthy scripts that will be imported elsewhere, which is not the case for this script.
+break up the RegEx in imageSearch because I was having trouble comprehending everything in one line, 
+as the full regular expression was a bit overwhelming to do all at once. Since the instructions mentioned
+that we have freedom to choose how we want to do this, I chose notto use main() or if __name__ == "__main__"
+because during my research, I discovered that these are mainly used for lengthy scripts that will be 
+imported elsewhere, which is not the case for this script.
 
 Additional Note: This script is ran by terminal (so type python assignment3.py to execute)"""
 
@@ -29,8 +29,8 @@ def imageSearch(rows):
     period = r"\."
     group = "(" + joined_types + ")"
     end_character = r"$"
-    regex_string = period + group + end_character
-    file_type_regex = re.compile(regex_string, re.IGNORECASE)
+    regex_main_part = period + group + end_character
+    file_type_regex = re.compile(regex_main_part, re.IGNORECASE)
     all_files = len(rows)
     stored_matching_files = [row for row in rows if file_type_regex.search(row[0])]
     percent = (len(stored_matching_files) / all_files) * 100
