@@ -1,12 +1,3 @@
-"""Note: The URL was not working so I had to test a local file version of the script. I chose to 
-break up the RegEx in imageSearch because I was having trouble comprehending everything in one line, 
-as the full regular expression was a bit overwhelming to do all at once. Since the instructions mentioned
-that we have freedom to choose how we want to do this, I chose notto use main() or if __name__ == "__main__"
-because during my research, I discovered that these are mainly used for lengthy scripts that will be 
-imported elsewhere, which is not the case for this script.
-
-Additional Note: This script is ran by terminal (so type python assignment3.py to execute)"""
-
 import urllib.request
 import csv 
 import re
